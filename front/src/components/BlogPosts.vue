@@ -7,10 +7,12 @@ import plant3 from '../assets/plant3.jpg'
 
 const posts = ref([
   {
-    title: 'Nuxt Icon v1',
-    description: 'Discover Nuxt Icon v1!',
+    title: 'Synorva',
+    description: 'Design a multimodal tool that analyzes music & images, maps their emotions (valence–arousal), associates media with each other and generates coherent audio tracks from images/videos.',
     image: plant1,
-    date: '2024-11-25'
+    date: '2025-10-30',
+    try: 'http://localhost:5174/',
+    page: 'https://github.com/sup4nova/Synorva'
   },
   {
     title: 'Nuxt 3.14',
@@ -50,12 +52,26 @@ const posts = ref([
           <p class="text-xs text-[#66FF9A]/70">{{ new Date(post.date).toDateString() }}</p>
           <h3 class="text-2xl font-bold text-[#FF9D40]">{{ post.title }}</h3>
           <p class="opacity-80">{{ post.description }}</p>
-          <button
-            class="mt-2 px-4 py-2 rounded-lg bg-[#D16FFF]/80 hover:bg-[#D16FFF]
-                   text-white font-semibold tracking-wide transition"
+          <a
+          :href="post.try"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-1 mt-2 px-4 py-2 rounded-lg
+                bg-[#D16FFF]/80 hover:bg-[#D16FFF] text-white font-semibold
+                tracking-wide transition"
           >
-            Read more →
-          </button>
+          Try it →
+        </a>
+        <a
+          :href="post.page"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-1 mt-2 px-4 py-2 rounded-lg
+                bg-[#D16FFF]/80 hover:bg-[#D16FFF] text-white font-semibold
+                tracking-wide transition"
+          >
+          Read more →
+        </a>
         </div>
       </article>
     </div>

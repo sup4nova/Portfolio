@@ -4,6 +4,7 @@
     <Hero />
     <LongCard />
     <BlogPosts />
+    <Certifications />
     <main class="max-w-6xl mx-auto px-6 py-10">
       <RouterView />
     </main>
@@ -15,5 +16,6 @@ import Navbar from '@/components/Navbar.vue'
 import Hero from '@/components/Hero.vue'
 import LongCard from '@/components/LongCard.vue'
 import BlogPosts from '@/components/BlogPosts.vue'
+import Certifications from '@/components/Certifications.vue'
 
 </script>
