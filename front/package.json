@@ -1,0 +1,29 @@
+{
+  "name": "front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3",
+    "vuesax-alpha": "^0.2.0-beta.80"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "@unocss/preset-icons": "^66.5.4",
+    "@unocss/preset-wind": "^66.5.4",
+    "@unocss/transformer-variant-group": "^66.5.4",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "unocss": "^66.5.4",
+    "vite": "^7.1.7",
+    "vue-tsc": "^3.1.0"
+  }
+}

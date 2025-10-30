@@ -1,0 +1,85 @@
+# === GLOBAL ===
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Environnements virtuels Python
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Fichiers Python compilés / caches
+*.sqlite3
+*.db
+instance/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# === BACK (Python / FastAPI) ===
+# fichiers temporaires, caches et artefacts
+__pycache__/
+*.py[cod]
+*.env
+*.env.*
+.env.local
+.env.production
+*.sqlite
+*.db
+*.log
+
+# build / distribution
+build/
+dist/
+*.egg-info/
+
+# === FRONT (Vite / Vue 3) ===
+node_modules/
+dist/
+.cache/
+.npm/
+yarn-error.log
+pnpm-lock.yaml
+package-lock.json
+
+# fichiers temporaires
+*.local
+*.env
+*.env.*
+.env.local
+.env.production
+
+# Fichiers générés par Vite/Nuxt
+.nuxt/
+.output/
+*.tsbuildinfo
+
+# === TESTS / COVERAGE ===
+coverage/
+.coverage
+.cache/
+pytest_cache/
+*.coverage
+
+# === MISC ===
+# uploads, secrets, runtime files
+*.key
+*.pem
+*.crt
+*.secret
+*.token
+*.session
+
+
+src/assets
