@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="JavaCryptoTool — minimal abstract">
+  <defs>
+    <linearGradient id="cry-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#02100a"></stop>
+      <stop offset="42%" stop-color="#0a1c0e"></stop>
+      <stop offset="100%" stop-color="#1c2410"></stop>
+    </linearGradient>
+    <radialGradient id="cry-vig" cx="50%" cy="46%" r="60%">
+      <stop offset="0%" stop-color="#10472f" stop-opacity="0.30"></stop>
+      <stop offset="100%" stop-color="#10472f" stop-opacity="0"></stop>
+    </radialGradient>
+    <linearGradient id="cry-star" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e9468"></stop>
+      <stop offset="100%" stop-color="#0f6444"></stop>
+    </linearGradient>
+    <filter id="cry-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0"></feColorMatrix>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" rx="16" fill="url(#cry-bg)"></rect>
+  <rect width="800" height="600" rx="16" fill="url(#cry-vig)"></rect>
+
+  
+  <g transform="translate(400 300)">
+    <circle r="56" fill="none" stroke="#0f6444" stroke-width="1.5" stroke-dasharray="6 9" opacity="0.4"></circle>
+    
+    <circle cx="0" cy="-56" r="2.5" fill="#0f6444" opacity="0.6"></circle>
+    <circle cx="56" cy="0" r="2.5" fill="#0f6444" opacity="0.45"></circle>
+    <circle cx="0" cy="56" r="2.5" fill="#0f6444" opacity="0.6"></circle>
+    <circle cx="-56" cy="0" r="2.5" fill="#0f6444" opacity="0.45"></circle>
+    
+    <path d="M 0,-30 Q 5,-5 30,0 Q 5,5 0,30 Q -5,5 -30,0 Q -5,-5 0,-30 Z" fill="url(#cry-star)"></path>
+  </g>
+
+  <rect width="800" height="600" rx="16" filter="url(#cry-grain)" opacity="0.045"></rect>
+</svg>
