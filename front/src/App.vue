@@ -1,21 +1,31 @@
 <template>
-  <div class="min-h-100vh bg-[#050505] text-[#EDEDED]">
-    <Navbar />,
-    <Hero />
-    <LongCard />
-    <BlogPosts />
+  <div class="min-h-100vh bg-[#0a0a0a] text-[#EDEDED]">
+    <Navbar />
+    <div id="home"><Hero /></div>
+    <div id="about"><LongCard /></div>
+    <div id="working-with-ai"><WorkingWithAI /></div>
+    <div id="projects"><BlogPosts /></div>
+    <CareerLedger />
     <Certifications />
-    <main class="max-w-6xl mx-auto px-6 py-10">
-      <RouterView />
-    </main>
+    <div id="contact"><ContactCard /></div>
+    <AppFooter />
   </div>
 </template>
+
+<style>
+#about {
+  margin-top: 5rem;
+}
+</style>
 
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue'
 import Hero from '@/components/Hero.vue'
 import LongCard from '@/components/LongCard.vue'
+import WorkingWithAI from '@/components/WorkingWithAI.vue'
 import BlogPosts from '@/components/BlogPosts.vue'
+import CareerLedger from '@/components/CareerLedger.vue'
 import Certifications from '@/components/Certifications.vue'
-
+import ContactCard from './components/ContactCard.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>

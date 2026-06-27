@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Sup4nova">
+  <defs>
+    <linearGradient id="fav-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1c0e"></stop>
+      <stop offset="100%" stop-color="#02100a"></stop>
+    </linearGradient>
+    <linearGradient id="fav-star" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ee9c8"></stop>
+      <stop offset="55%" stop-color="#1e9468"></stop>
+      <stop offset="100%" stop-color="#0f6444"></stop>
+    </linearGradient>
+    <radialGradient id="fav-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e9468" stop-opacity="0.6"></stop>
+      <stop offset="70%" stop-color="#1e9468" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="15" fill="url(#fav-bg)"></rect>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" fill="none" stroke="#1e9468" stroke-opacity="0.30" stroke-width="1.5"></rect>
+
+  <circle cx="32" cy="32" r="22" fill="url(#fav-glow)"></circle>
+
+  
+  <g transform="translate(32 32)">
+    <path d="M 0,-22 Q 3.6,-3.6 22,0 Q 3.6,3.6 0,22 Q -3.6,3.6 -22,0 Q -3.6,-3.6 0,-22 Z" fill="url(#fav-star)"></path>
+    <ellipse cx="-6" cy="-8" rx="5" ry="3" fill="#ffffff" opacity="0.30" transform="rotate(-30 -6 -8)"></ellipse>
+  </g>
+
+  
+  <path d="M 47,16 Q 48,11 53,10 Q 48,9 47,4 Q 46,9 41,10 Q 46,11 47,16 Z" fill="#5ee9c8" opacity="0.85"></path>
+</svg>

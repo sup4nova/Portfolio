@@ -82,4 +82,3 @@ pytest_cache/
 *.session
 
 
-src/assets

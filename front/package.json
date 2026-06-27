@@ -10,13 +10,12 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@vueuse/head": "^2.0.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.4.1",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3",
-    "vue-shell": "^1.0.3",
-    "vue3-carousel": "^0.17.0",
-    "vuesax-alpha": "^0.2.0-beta.80"
+    "vue3-carousel": "^0.17.0"
   },
   "devDependencies": {
     "@primevue/auto-import-resolver": "^4.4.1",
@@ -26,10 +25,11 @@
     "@unocss/transformer-variant-group": "^66.5.4",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
-    "typescript": "~5.9.3",
+    "typescript": "~5.8.3",
     "unocss": "^66.5.4",
     "unplugin-vue-components": "^30.0.0",
     "vite": "^7.1.7",
+    "vite-ssg": "^28.3.0",
     "vue-tsc": "^3.1.0"
   }
 }
