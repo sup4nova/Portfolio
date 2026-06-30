@@ -1,26 +1,37 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
+
+html { overflow-x: hidden; }
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: #213547;
-  background-color: #f7f6f0;
+  color: #EDEDED;
+  background-color: #0a0a0a;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
+  overflow-x: clip; /* clip sans créer de scroll container — sticky navbar non affectée */
 }
 
 a {

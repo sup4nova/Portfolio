@@ -1,4 +1,5 @@
-```vue
+<!-- CareerLedger.vue -->
+
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
@@ -427,9 +428,10 @@ function duration(start: string, end: string | null) {
 
   position: relative;
   isolation: isolate;
-  padding: 4.5rem 3rem 4rem;
+  padding: 4.5rem clamp(1.25rem, 5vw, 3rem) 4rem;
   margin: 4rem auto;
-  max-width: 90%;
+  width: 90%;
+  max-width: 1200px;
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -438,8 +440,8 @@ function duration(start: string, end: string | null) {
 
 .section-header {
   position: relative;
+  width: auto;
   z-index: 1;
-  max-width: 1280px;
   margin: 0 auto 2.25rem;
   display: flex;
   align-items: flex-end;
@@ -484,7 +486,6 @@ function duration(start: string, end: string | null) {
 .filters {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
   margin: 0 auto 1.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -537,7 +538,6 @@ function duration(start: string, end: string | null) {
 .ledger {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
   margin: 0 auto;
   list-style: none;
   padding: 0;
@@ -736,7 +736,6 @@ function duration(start: string, end: string | null) {
 .section-foot {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
   margin: 1.5rem auto 0;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
@@ -783,7 +782,6 @@ function duration(start: string, end: string | null) {
 @media (max-width: 768px) {
   .career-section {
     padding: 3rem 1.25rem;
-    max-width: 100%;
   }
 
   .section-title {

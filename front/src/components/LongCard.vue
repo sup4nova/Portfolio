@@ -1,3 +1,5 @@
+<!-- LongCard.vue -->
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 const visible = ref(false)
@@ -170,7 +172,7 @@ function scrollToContact() {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.shell { background: #0d0d0d; border-radius: 20px;margin: 0 auto; padding: 2px; font-family: 'DM Sans', sans-serif; max-width: 90%; margin: 0 auto; animation: cardFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both 0.2s; }
+.shell { background: #0d0d0d; border-radius: 24px; padding: 2px; font-family: 'DM Sans', sans-serif; width: 90%; max-width: 1200px; margin: 0 auto; animation: cardFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both 0.2s; }
 .shell-inner { background: #111; border-radius: 18px; margin-top: 30px; overflow: hidden; }
 
 .header { background: #161616; border-bottom: 1px solid #CBFF4820; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; }
@@ -229,7 +231,7 @@ function scrollToContact() {
 .fact-icon--y { color: #CBFF48; }
 .fact-icon--g { color: #00bb81; }
 
-.footer { padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: #161616; }
+.footer { padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; background: #161616; }
 .links { display: flex; gap: 8px; flex-wrap: wrap; }
 .lbtn { font-size: 0.75rem; font-weight: 500; padding: 6px 14px; border-radius: 6px; text-decoration: none; transition: background 0.2s, color 0.2s, border-color 0.2s; }
 .lbtn-y { background: #CBFF48; color: #0a0a0a; }

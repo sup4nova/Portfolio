@@ -68,6 +68,7 @@ function openEmail() {
   border-radius: 1.5rem;
   padding: 1.5rem 2rem;
   width: 90%;
+  max-width: 1200px;
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
   animation: cardSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both 0.1s;
 }

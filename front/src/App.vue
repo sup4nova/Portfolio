@@ -13,6 +13,11 @@
 </template>
 
 <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 #about {
   margin-top: 5rem;
 }

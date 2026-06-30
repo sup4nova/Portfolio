@@ -1,3 +1,5 @@
+<!-- BlogPosts.vue -->
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import asset1 from '../assets/asset1.svg'
@@ -141,13 +143,12 @@ onMounted(() => {
 .posts-section{
   min-height: 92vh;
   background-color: #151515;
-  padding: 2.5rem;
-  border-radius: 18px;
-  max-width: 90%;
-  margin: 0 auto 4rem;
-  margin-top: 7rem;
-  flex-direction: column;
-  justify-content: space-between;
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 2.5rem clamp(1.25rem, 5vw, 2.5rem);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
@@ -182,11 +183,11 @@ onMounted(() => {
   letter-spacing: -0.02em;
 }
 
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: stretch;
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .post-card:not(.post-card--featured):not(:last-child) .post-img-wrap {
@@ -227,16 +228,6 @@ onMounted(() => {
   width: 25%;
   max-width: 25%;
   flex-shrink: 0;
-}
-
-@media (min-width: 769px) and (max-width: 1100px) {
-  .posts-grid { grid-template-columns: 1fr 1fr; }
-  .post-card--featured,
-  .post-card:last-child { grid-column: 1 / -1; }
-}
-
-@media (max-width: 768px) {
-  .posts-grid { grid-template-columns: 1fr; }
 }
 
 .post-img-wrap {
@@ -385,4 +376,39 @@ onMounted(() => {
   border-color: #00bb81;
   color: #00bb81;
 }
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .posts-grid { grid-template-columns: 1fr 1fr; }
+
+  .post-card--featured,
+  .post-card:last-child {
+    grid-column: 1 / -1;
+    flex-direction: column;
+  }
+
+  .post-card--featured .post-img-wrap,
+  .post-card:last-child .post-img-wrap {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-grid { grid-template-columns: 1fr; }
+
+  .post-card--featured,
+  .post-card:last-child {
+    grid-column: auto;
+    flex-direction: column;
+  }
+
+  .post-card--featured .post-img-wrap,
+  .post-card:last-child .post-img-wrap {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+  }
+}
+
 </style>

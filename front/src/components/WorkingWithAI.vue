@@ -1,3 +1,5 @@
+<!-- WorkingWithAI.vue -->
+
 <template>
   <section class="ai-section">
     <span class="bg-grid"></span>
@@ -46,22 +48,20 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; }
-
 .ai-section {
   --lime:#cbff48; --emerald:#00bb81; --aqua:#5ee9c8;
   --ink:#fff; --ink-2:rgba(255,255,255,.62); --ink-3:rgba(255,255,255,.38);
   --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
   --bg:#151515; --bg-soft:rgba(255,255,255,.018);
-  position:relative; isolation:isolate; padding:4.5rem 3rem 4rem;
-  margin:4rem auto; max-width:90%;
+  position:relative; isolation:isolate; padding:4.5rem clamp(1.25rem,5vw,3rem) 4rem;
+  margin:4rem auto; width:90%; max-width:1200px;
   background:var(--bg); border:1px solid var(--line); border-radius:24px;
   overflow:hidden; color:var(--ink);
 }
 
 
 .section-header {
-  position:relative; z-index:1; max-width:1280px; margin:0 auto 2.5rem;
+  position:relative; z-index:1; margin:0 auto 2.5rem;
   display:grid; grid-template-columns:1fr 260px; gap:2.5rem; align-items:end;
   padding-bottom:1.75rem; border-bottom:1px solid var(--line);
 }
@@ -131,7 +131,7 @@
 }
 
 .spectrum {
-  position:relative; z-index:1; max-width:1280px; margin:0 auto 1.75rem;
+  position:relative; z-index:1; margin:0 auto 1.75rem;
   display:flex; flex-direction:column; gap:.7rem;
 }
 
@@ -159,7 +159,7 @@
 .sl-dot.assisted { background:var(--emerald); }
 
 .lanes {
-  position:relative; z-index:1; max-width:1280px; margin:0 auto;
+  position:relative; z-index:1; margin:0 auto;
   list-style:none; padding:0; display:grid;
   grid-template-columns:repeat(3,1fr); gap:1.25rem;
 }
@@ -246,7 +246,7 @@
 }
 
 .learned {
-  position:relative; z-index:1; max-width:1280px; margin:2.5rem auto 0;
+  position:relative; z-index:1; margin:2.5rem auto 0;
   padding:2.5rem 2.75rem;
   background:radial-gradient(600px 240px at 88% 0%,rgba(203,255,72,.07),transparent 60%),
     linear-gradient(180deg,rgba(255,255,255,.022),transparent);
@@ -298,7 +298,7 @@
 }
 
 @media (max-width:640px) {
-  .ai-section { padding:3rem 1.25rem; max-width:100%; }
+  .ai-section { padding:3rem 1.25rem; }
   .learned { padding:2rem 1.5rem; }
 }
 </style>

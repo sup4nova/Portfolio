@@ -117,15 +117,17 @@ function scrollToAbout() {
 .hero-section {
   min-height: 92vh;
   background-color: #0a0a0a;
-  padding: 3rem 2.5rem 2rem;
+  padding: 3rem clamp(1.25rem, 5vw, 2.5rem) 2rem;
   display: flex;
   width: 90%;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  /* clip-path clips filter:blur() effects que overflow:hidden ignore sur Safari */
+  clip-path: inset(0);
 }
 
 .hero-orb {
@@ -183,7 +185,7 @@ function scrollToAbout() {
 }
 
 @media (max-width: 480px) {
-  .hero-section { padding: 2rem 1.25rem 1.5rem; width: 100%; }
+  .hero-section { padding: 2rem 1.25rem 1.5rem; }
   .hero-visual { display: none; }
 }
 

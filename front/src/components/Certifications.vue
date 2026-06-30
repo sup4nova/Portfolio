@@ -98,9 +98,10 @@ const mostRecent = Math.max(...certifications.map(c => parseInt(c.year))).toStri
   --bg-card: #0a0a0a;
   position: relative;
   isolation: isolate;
-  padding: 4.5rem 3rem 4rem;
+  padding: 4.5rem clamp(1.25rem, 5vw, 3rem) 4rem;
   margin: 4rem auto;
-  max-width: 90%;
+  width: 90%;
+  max-width: 1200px;
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -110,7 +111,6 @@ const mostRecent = Math.max(...certifications.map(c => parseInt(c.year))).toStri
 .section-header {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
   margin: 0 auto 3rem;
   display: flex;
   align-items: flex-end;
@@ -197,7 +197,6 @@ const mostRecent = Math.max(...certifications.map(c => parseInt(c.year))).toStri
 .certs-carousel {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
   margin: 0 auto;
   padding: .5rem 0 3.5rem;
 }
@@ -441,7 +440,6 @@ const mostRecent = Math.max(...certifications.map(c => parseInt(c.year))).toStri
 .section-foot {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
   margin: 1rem auto 0;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
