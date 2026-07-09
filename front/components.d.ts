@@ -18,6 +18,7 @@ declare module 'vue' {
     ContactCard: typeof import('./src/components/ContactCard.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     LongCard: typeof import('./src/components/LongCard.vue')['default']
+    MatchQuiz: typeof import('./src/components/MatchQuiz.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

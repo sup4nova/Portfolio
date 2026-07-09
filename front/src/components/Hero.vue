@@ -36,7 +36,7 @@ function scrollToAbout() {
           Explorations at the edge of
           <em>cyber</em>,
           <em>development</em> &amp;
-          <em>AI-driven art</em>.
+          <em>ML-driven art</em>.
         </p>
 
         <div class="hero-actions anim-item anim-item--5">
@@ -62,7 +62,7 @@ function scrollToAbout() {
           <img :src="stars" alt="Sup4nova hero visual" class="hero-img" />
           <div class="img-glow"></div>
         </div>
-        <div class="float-pill">✦ AI · Dev · Cyber</div>
+        <div class="float-pill">✦ ML · Dev · Cyber</div>
       </div>
     </div>
   </section>

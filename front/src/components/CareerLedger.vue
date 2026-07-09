@@ -270,7 +270,7 @@ function duration(start: string, end: string | null) {
         </h2>
 
         <p class="section-sub">
-        Timeline bringing together your jobs, internships, apprenticeships, and diplomas in chronological order.
+        Timeline bringing together my jobs, internships, apprenticeships, and diplomas in chronological order.
         </p>
       </div>
     </header>

@@ -22,7 +22,7 @@ function openEmail() {
         <div class="contact-top">
           <h3 class="contact-name">Sup4nova</h3>
         </div>
-        <p class="contact-role">Cyber · Dev · AI 𖦹 France</p>
+        <p class="contact-role">Cyber · Dev · ML 𖦹 France</p>
         <p class="contact-desc"> Have a question in mind? Feel free to reach out through my LinkedIn or Email right here. </p>
       </div>
 

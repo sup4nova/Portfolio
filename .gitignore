@@ -51,7 +51,6 @@ dist/
 .npm/
 yarn-error.log
 pnpm-lock.yaml
-package-lock.json
 
 # fichiers temporaires
 *.local

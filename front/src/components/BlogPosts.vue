@@ -16,7 +16,8 @@ const posts = ref([
     description: 'Design a multimodal tool that analyzes music & images, maps their emotions (valence–arousal), associates media with each other and generates coherent audio tracks from images/videos.',
     image: asset1,
     tryUrl: 'https://github.com/sup4nova/Synorva',
-    pageUrl: 'https://sup4nova.com/projects/synorva'
+    pageUrl: 'https://sup4nova.com/projects/synorva',
+    slideUrl: 'https://sup4nova.com/projects/synorva/slides'
   },
   {
     title: 'Jobscraper',
@@ -26,7 +27,9 @@ const posts = ref([
     description: 'A web scraper for extracting job listings from various online platforms.',
     image: asset2,
     tryUrl: 'https://github.com/sup4nova/Jobscraper',
-    pageUrl: 'https://sup4nova.com/projects/jobscraper'
+    pageUrl: 'https://sup4nova.com/projects/jobscraper',
+    slideUrl: 'https://sup4nova.com/projects/jobscraper/slides'
+
   },
   {
     title: 'JavaCryptoTool',
@@ -36,16 +39,18 @@ const posts = ref([
     description: 'A Java-based application that provides a suite of cryptographic tools for encryption, decryption, hashing, and key management.',
     image: asset3,
     tryUrl: 'https://github.com/sup4nova/JavaCryptoTool',
-    pageUrl: 'https://sup4nova.com/projects/javacryptotool/'
-  }
-  ,{
+    pageUrl: 'https://sup4nova.com/projects/javacryptotool/',
+    slideUrl: 'https://sup4nova.com/projects/javacryptotool/slides'
+  },
+  {
     title: 'RandomSpotifyGenerator',
     tag: '2026 Side Project',
     badge: "Upcoming",
     badgeType: 'dim',
     description: 'A webapp that generates random Spotify playlists or picks random tracks, artists, or albums from your library, helping you rediscover your music and break out of listening habits.',
     image: asset4,
-    }
+    sneakpeekUrl: 'https://sup4nova.com/projects/random-spotify-generator/sneakpeek',
+  }
 ])
 
 const sectionRef = ref<HTMLElement | null>(null)
@@ -66,7 +71,7 @@ onMounted(() => {
       <span class="section-eyebrow">✦ Latest</span>
       <h2 class="section-title">Projects & Posts</h2>
         <p class="section-sub">
-          A selection of my latest projects, writings, and experiments across software development, AI, and beyond.<br>
+          A selection of my latest projects, writings, and experiments across software development, ML, and beyond.<br>
           Only demos are live for now and the projects are under continuous development. The code is on my GitHub but feel free to reach out for more!</p>
     </div>
 
@@ -103,6 +108,24 @@ onMounted(() => {
               class="btn-ghost"
             >
               GitHub ↗
+            </a>
+            <a
+              v-if="post.sneakpeekUrl"
+              :href="post.sneakpeekUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+            >
+              Sneak Peek ↗
+            </a>
+            <a
+              v-if="post.slideUrl"
+              :href="post.slideUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+            >
+              Slides ↗
             </a>
             <a
               v-if="post.pageUrl"

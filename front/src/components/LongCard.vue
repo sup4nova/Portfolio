@@ -23,12 +23,9 @@ function scrollToContact() {
     <div class="shell">
         <div class="mb-10"> </div>
         <div class="header">
-          <div class="av">
-            <span class="av-txt">:)</span>
-          </div>
           <div class="hinfo">
             <div class="hname">Sup4nova</div>
-            <div class="hrole">Cyber · Development · AI</div>
+            <div class="hrole">Cyber · Development · ML</div>
             <div class="hbadges">
               <span class="hb hb-y">Open to work</span>
               <span class="hb hb-y">Side projects</span>
@@ -47,9 +44,9 @@ function scrollToContact() {
           <div class="col">
             <div class="col-title">About</div>
             <p class="bio-txt">
-              I’m a curious builder shaped by code, support, 
+              I’m a curious builder shaped by code, support,
               and the constant desire to learn what lies beyond the familiar.
-              From exploring the foundations of AI to blending development and cybersecurity knowledge, 
+              From exploring the foundations of ML to blending development and cybersecurity knowledge,
               I create with both logic and intuition in mind.
               My journey began by helping users solve problems directly listening first, understanding 
               frustration, and learning that good technology should feel human before it feels impressive.
@@ -82,7 +79,7 @@ function scrollToContact() {
                     <span class="proj-badge proj-badge--y">Beta · Demo</span>
                     <span class="proj-tag">Private Project</span>
                   </div>
-                  <div class="proj-sub">Multimodal AI tool that analyzes music and visuals and generates coherent audio tracks</div>
+                  <div class="proj-sub">Multimodal ML tool that analyzes music and visuals and generates coherent audio tracks</div>
                 </div>
                 <span class="proj-arr">↗</span>
               </a>
@@ -94,7 +91,7 @@ function scrollToContact() {
                     <span class="proj-badge proj-badge--dim">Local · Demo</span>
                     <span class="proj-tag">Private Project</span>
                   </div>
-                  <div class="proj-sub">AI-powered job scraping and CV generation tool. Functional locally — AI bot &amp; Discord bot coming soon. Video demo planned.</div>
+                  <div class="proj-sub">Automated job scraping and CV generation tool. Functional locally — AI-powered matching &amp; Discord bot in progress. Video demo planned.</div>
                 </div>
                 <span class="proj-arr">↗</span>
               </a>
@@ -103,7 +100,7 @@ function scrollToContact() {
                 <div class="proj-info">
                   <div class="proj-name-row">
                     <div class="proj-name">JavaCryptoTool</div>
-                    <span class="proj-badge proj-badge--y">Online</span>
+                    <span class="proj-badge proj-badge--y">DEMO</span>
                     <span class="proj-tag">School Project</span>
                   </div>
                   <div class="proj-sub">Java-based AES encryption and decryption tool featuring a web interface and servlet backend for experimenting with cryptographic operations and secure text conversion.</div>
@@ -157,11 +154,6 @@ function scrollToContact() {
   <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap');
 
-@keyframes onlinePulse {
-  0%, 100% { box-shadow: 0 0 0 0 #00bb8160; }
-  50%       { box-shadow: 0 0 0 6px #00bb8100; }
-}
-
 @keyframes xpFill {
   from { width: 0; }
   to   { width: 72%; }
@@ -176,9 +168,6 @@ function scrollToContact() {
 .shell-inner { background: #111; border-radius: 18px; margin-top: 30px; overflow: hidden; }
 
 .header { background: #161616; border-bottom: 1px solid #CBFF4820; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; }
-.av { width: 64px; height: 64px; border-radius: 50%; background: #1a1a1a; border: 2px solid #CBFF48; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; }
-.av-txt { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; font-weight: 700; color: #CBFF48; }
-.av-online { position: absolute; bottom: 2px; right: 2px; width: 12px; height: 12px; border-radius: 50%; background: #00bb81; border: 2px solid #161616; animation: onlinePulse 2s ease-in-out infinite; }
 .hinfo { flex: 1; }
 .hname { font-size: 1.3rem; font-weight: 700; color: #f0f0f0; letter-spacing: -0.02em; line-height: 1.1; }
 .hrole { font-size: 0.75rem; color: #00bb81; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }

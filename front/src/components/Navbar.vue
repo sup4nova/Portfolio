@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import logo from '../assets/sup4nova-logo.png'
+import MatchQuiz from './MatchQuiz.vue'
 
 const activeSection = ref('home')
 const menuOpen = ref(false)
@@ -138,6 +139,8 @@ function navigate(id: string, event: MouseEvent) {
           {{ s.label }}
         </button>
       </div>
+
+      <MatchQuiz />
 
       <button
         class="nav-toggle"

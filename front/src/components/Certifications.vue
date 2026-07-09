@@ -23,10 +23,10 @@ const mostRecent = Math.max(...certifications.map(c => parseInt(c.year))).toStri
       <div class="head-l">
         <span class="section-eyebrow">
           <span class="dot"></span>
-          <span>Certifications</span>
+          <span>Courses &amp; Learning</span>
         </span>
         <h2 class="section-title">
-          <span>Certifications</span>
+          <span>Courses &amp; Learning</span>
         </h2>
         <p class="section-sub">
           Followed <b>{{ certifications.length }} courses</b> · most recent <b>{{ mostRecent }}</b>.
@@ -211,7 +211,7 @@ const mostRecent = Math.max(...certifications.map(c => parseInt(c.year))).toStri
   border-radius: 18px;
   padding: 1.75rem 1.75rem 1.5rem;
   margin: 0 .6rem;
-  max-height: 280px;
+  min-height: 280px;
   width: 100%;
   text-align: left;
   cursor: default;
