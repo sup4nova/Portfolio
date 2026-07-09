@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "front"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w front",
+    "build": "npm run build -w front",
+    "preview": "npm run preview -w front",
+    "test": "npm run test -w front"
+  }
+}
