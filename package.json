@@ -2,13 +2,37 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "workspaces": [
-    "front"
-  ],
   "scripts": {
-    "dev": "npm run dev -w front",
-    "build": "npm run build -w front",
-    "preview": "npm run preview -w front",
-    "test": "npm run test -w front"
+    "dev": "cd front && npm run dev",
+    "build": "cd front && npm run build",
+    "preview": "cd front && npm run preview",
+    "test": "cd front && npm run test"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@vueuse/head": "^2.0.0",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.4.1",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3",
+    "vue3-carousel": "^0.17.0"
+  },
+  "devDependencies": {
+    "@primevue/auto-import-resolver": "^4.4.1",
+    "@types/node": "^24.6.0",
+    "@unocss/preset-icons": "^66.5.4",
+    "@unocss/preset-wind": "^66.5.4",
+    "@unocss/transformer-variant-group": "^66.5.4",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/test-utils": "^2.4.11",
+    "@vue/tsconfig": "^0.8.1",
+    "jsdom": "^29.1.1",
+    "typescript": "~5.8.3",
+    "unocss": "^66.5.4",
+    "unplugin-vue-components": "^30.0.0",
+    "vite": "^7.1.7",
+    "vite-ssg": "^28.3.0",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.1.0"
   }
 }
