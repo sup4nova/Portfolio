@@ -1,0 +1,14 @@
+services:
+  back:
+    build: ./back
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  front:
+    build: ./front
+    depends_on:
+      - back
+    ports:
+      - "8002:80"
+    restart: unless-stopped
