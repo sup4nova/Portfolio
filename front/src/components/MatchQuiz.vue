@@ -121,11 +121,13 @@ function back() {
   if (step.value > 0) step.value--
 }
 
+const API_URL = import.meta.env.VITE_API_URL || '/api'
+
 async function submit() {
   isSubmitting.value = true
   errorMsg.value = ''
   try {
-    const res = await fetch('/api/match', {
+    const res = await fetch(`${API_URL}/match`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(answers),
@@ -133,7 +135,7 @@ async function submit() {
     if (!res.ok) throw new Error(`Request failed (${res.status})`)
     result.value = await res.json()
   } catch {
-    errorMsg.value = "Couldn't reach the matching service — try again in a moment."
+    errorMsg.value = "Couldn't reach the matching service"
   } finally {
     isSubmitting.value = false
   }
