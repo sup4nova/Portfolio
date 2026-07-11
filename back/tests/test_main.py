@@ -8,4 +8,4 @@ client = TestClient(app)
 def test_hello():
     res = client.get("/hello")
     assert res.status_code == 200
-    assert res.json() == {"message": "Hello from FastAPI 🎉"}
+    assert res.json() == {"message": "Hello from FastAPI - deployed by CI 🚀"}
