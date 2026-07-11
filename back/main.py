@@ -28,7 +28,7 @@ app.add_middleware(
 
 @app.get("/hello")
 def hello():
-    return {"message": "Hello from FastAPI 🎉"}
+    return {"message": "Hello from FastAPI - deployed by CI 🚀"}
 
 @app.post("/match", response_model=MatchResponse)
 def match(payload: MatchRequest):
