@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Synorva — multimodal audio-visual abstract">
+  <defs>
+    <radialGradient id="syn-bg" cx="50%" cy="32%" r="85%">
+      <stop offset="0%" stop-color="#13414f"></stop>
+      <stop offset="48%" stop-color="#0a2632"></stop>
+      <stop offset="100%" stop-color="#04141a"></stop>
+    </radialGradient>
+    <linearGradient id="syn-wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5ee9c8"></stop>
+      <stop offset="50%" stop-color="#cbff48"></stop>
+      <stop offset="100%" stop-color="#00bb81"></stop>
+    </linearGradient>
+    <linearGradient id="syn-img" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cbff48"></stop>
+      <stop offset="100%" stop-color="#00bb81"></stop>
+    </linearGradient>
+    <radialGradient id="syn-orb" cx="38%" cy="34%" r="70%">
+      <stop offset="0%" stop-color="#fbff8a"></stop>
+      <stop offset="45%" stop-color="#cbff48"></stop>
+      <stop offset="100%" stop-color="#00bb81"></stop>
+    </radialGradient>
+    <filter id="syn-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"></feGaussianBlur>
+    </filter>
+    <filter id="syn-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0"></feColorMatrix>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#syn-bg)"></rect>
+
+  
+  <circle cx="640" cy="150" r="220" fill="#cbff48" opacity="0.12" filter="url(#syn-soft)"></circle>
+  <circle cx="170" cy="470" r="200" fill="#5ee9c8" opacity="0.10" filter="url(#syn-soft)"></circle>
+
+  
+  <g opacity="0.9" transform="translate(86 196)">
+    <g opacity="0.85">
+      <rect x="0" y="0" width="46" height="46" rx="6" fill="#0a2632"></rect>
+      <rect x="54" y="0" width="46" height="46" rx="6" fill="#00bb81" opacity="0.55"></rect>
+      <rect x="108" y="0" width="46" height="46" rx="6" fill="#0e3340"></rect>
+      <rect x="0" y="54" width="46" height="46" rx="6" fill="#5ee9c8" opacity="0.7"></rect>
+      <rect x="54" y="54" width="46" height="46" rx="6" fill="#cbff48" opacity="0.85"></rect>
+      <rect x="108" y="54" width="46" height="46" rx="6" fill="#0a2632"></rect>
+      <rect x="0" y="108" width="46" height="46" rx="6" fill="#0e3340"></rect>
+      <rect x="54" y="108" width="46" height="46" rx="6" fill="#00bb81" opacity="0.4"></rect>
+      <rect x="108" y="108" width="46" height="46" rx="6" fill="#5ee9c8" opacity="0.55"></rect>
+    </g>
+  </g>
+
+  
+  <circle cx="400" cy="300" r="92" fill="url(#syn-orb)" opacity="0.16" filter="url(#syn-soft)"></circle>
+  <circle cx="400" cy="300" r="58" fill="url(#syn-orb)"></circle>
+  <ellipse cx="382" cy="282" rx="22" ry="14" fill="#ffffff" opacity="0.45" transform="rotate(-22 382 282)"></ellipse>
+  <circle cx="400" cy="300" r="58" fill="none" stroke="#04141a" stroke-opacity="0.25" stroke-width="2"></circle>
+
+  
+  <g stroke="#5ee9c8" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M 240 250 C 300 250 300 300 342 300"></path>
+    <path d="M 240 300 C 300 300 310 300 342 300"></path>
+    <path d="M 240 350 C 300 350 300 300 342 300"></path>
+  </g>
+
+  
+  <g transform="translate(470 300)" stroke="url(#syn-wave)" stroke-width="6" stroke-linecap="round">
+    <line x1="0" y1="-18" x2="0" y2="18"></line>
+    <line x1="22" y1="-42" x2="22" y2="42"></line>
+    <line x1="44" y1="-70" x2="44" y2="70"></line>
+    <line x1="66" y1="-36" x2="66" y2="36"></line>
+    <line x1="88" y1="-88" x2="88" y2="88"></line>
+    <line x1="110" y1="-54" x2="110" y2="54"></line>
+    <line x1="132" y1="-100" x2="132" y2="100"></line>
+    <line x1="154" y1="-44" x2="154" y2="44"></line>
+    <line x1="176" y1="-72" x2="176" y2="72"></line>
+    <line x1="198" y1="-28" x2="198" y2="28"></line>
+    <line x1="220" y1="-58" x2="220" y2="58"></line>
+  </g>
+
+  
+  <g stroke="#cbff48" stroke-width="2" fill="none" opacity="0.55" stroke-linecap="round">
+    <path d="M 458 300 C 466 300 466 282 470 282"></path>
+    <path d="M 458 300 C 466 300 466 300 470 300"></path>
+    <path d="M 458 300 C 466 300 466 318 470 318"></path>
+  </g>
+
+  
+  <circle cx="330" cy="190" r="5" fill="#cbff48"></circle>
+  <circle cx="500" cy="150" r="4" fill="#5ee9c8"></circle>
+  <circle cx="300" cy="430" r="4" fill="#00bb81"></circle>
+  <circle cx="560" cy="440" r="5" fill="#cbff48" opacity="0.8"></circle>
+
+  
+  <rect width="800" height="600" filter="url(#syn-grain)" opacity="0.05"></rect>
+  <rect width="800" height="600" fill="none"></rect>
+</svg>

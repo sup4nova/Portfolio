@@ -34,6 +34,7 @@ __pycache__/
 *.env
 *.env.*
 .env.local
+.env.production
 *.sqlite
 *.db
 *.log
@@ -82,3 +83,6 @@ pytest_cache/
 *.session
 
 
+
+.env*
+!.env.example

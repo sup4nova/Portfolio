@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Jobscraper — scraping network funneling into a tailored CV, abstract">
+  <defs>
+    <radialGradient id="job-bg" cx="50%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#13414f"></stop>
+      <stop offset="48%" stop-color="#0a2632"></stop>
+      <stop offset="100%" stop-color="#04141a"></stop>
+    </radialGradient>
+    <linearGradient id="job-doc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbff8a"></stop>
+      <stop offset="55%" stop-color="#cbff48"></stop>
+      <stop offset="100%" stop-color="#a8e635"></stop>
+    </linearGradient>
+    <linearGradient id="job-funnel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5ee9c8" stop-opacity="0.45"></stop>
+      <stop offset="100%" stop-color="#00bb81" stop-opacity="0.12"></stop>
+    </linearGradient>
+    <filter id="job-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"></feGaussianBlur>
+    </filter>
+    <filter id="job-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0"></feColorMatrix>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#job-bg)"></rect>
+
+  <circle cx="180" cy="130" r="210" fill="#5ee9c8" opacity="0.10" filter="url(#job-soft)"></circle>
+  <circle cx="620" cy="470" r="200" fill="#cbff48" opacity="0.11" filter="url(#job-soft)"></circle>
+
+  
+  <g>
+    
+    <g stroke="#5ee9c8" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round">
+      <path d="M 120 90 C 250 160 320 180 360 250"></path>
+      <path d="M 250 60 C 320 140 360 180 388 250"></path>
+      <path d="M 400 70 C 400 150 400 200 400 250"></path>
+      <path d="M 560 64 C 480 150 440 190 414 250"></path>
+      <path d="M 690 96 C 540 170 470 190 440 250"></path>
+      <path d="M 70 200 C 230 220 320 230 366 270"></path>
+      <path d="M 730 210 C 560 230 470 240 436 270"></path>
+    </g>
+    
+    <g>
+      <circle cx="120" cy="90" r="16" fill="#0a2632" stroke="#5ee9c8" stroke-width="2"></circle>
+      <circle cx="250" cy="60" r="12" fill="#0a2632" stroke="#cbff48" stroke-width="2"></circle>
+      <circle cx="400" cy="70" r="18" fill="#0a2632" stroke="#5ee9c8" stroke-width="2"></circle>
+      <circle cx="560" cy="64" r="11" fill="#0a2632" stroke="#cbff48" stroke-width="2"></circle>
+      <circle cx="690" cy="96" r="15" fill="#0a2632" stroke="#5ee9c8" stroke-width="2"></circle>
+      <circle cx="70" cy="200" r="10" fill="#0a2632" stroke="#00bb81" stroke-width="2"></circle>
+      <circle cx="730" cy="210" r="13" fill="#0a2632" stroke="#00bb81" stroke-width="2"></circle>
+      
+      <circle cx="120" cy="90" r="5" fill="#5ee9c8"></circle>
+      <circle cx="250" cy="60" r="4" fill="#cbff48"></circle>
+      <circle cx="400" cy="70" r="6" fill="#cbff48"></circle>
+      <circle cx="560" cy="64" r="3.5" fill="#5ee9c8"></circle>
+      <circle cx="690" cy="96" r="5" fill="#cbff48"></circle>
+      <circle cx="70" cy="200" r="3" fill="#00bb81"></circle>
+      <circle cx="730" cy="210" r="4" fill="#00bb81"></circle>
+    </g>
+  </g>
+
+  
+  <path d="M 330 252 L 470 252 L 432 330 L 368 330 Z" fill="url(#job-funnel)" stroke="#5ee9c8" stroke-opacity="0.5" stroke-width="2"></path>
+  
+  <g stroke="#cbff48" stroke-width="2" opacity="0.6">
+    <line x1="350" y1="272" x2="450" y2="272"></line>
+    <line x1="362" y1="296" x2="438" y2="296"></line>
+  </g>
+
+  
+  <g stroke="#cbff48" stroke-width="2" fill="none" opacity="0.55" stroke-linecap="round">
+    <path d="M 400 332 L 400 376"></path>
+    <path d="M 384 332 C 384 358 392 366 398 376"></path>
+    <path d="M 416 332 C 416 358 408 366 402 376"></path>
+  </g>
+
+  
+  <g transform="translate(316 384)">
+    <rect x="0" y="0" width="168" height="172" rx="12" fill="url(#job-doc)"></rect>
+    <rect x="0" y="0" width="168" height="172" rx="12" fill="#04141a" opacity="0.06"></rect>
+    
+    <path d="M 138 0 L 168 30 L 138 30 Z" fill="#04141a" opacity="0.18"></path>
+    
+    <g fill="#063b2e" opacity="0.8">
+      <rect x="22" y="34" width="76" height="9" rx="4.5"></rect>
+      <rect x="22" y="58" width="124" height="6" rx="3"></rect>
+      <rect x="22" y="72" width="124" height="6" rx="3"></rect>
+      <rect x="22" y="86" width="96" height="6" rx="3"></rect>
+      <rect x="22" y="112" width="124" height="6" rx="3"></rect>
+      <rect x="22" y="126" width="124" height="6" rx="3"></rect>
+      <rect x="22" y="140" width="70" height="6" rx="3"></rect>
+    </g>
+    
+    <circle cx="132" cy="40" r="13" fill="#00bb81"></circle>
+  </g>
+
+  
+  <g transform="translate(470 408)">
+    <path d="M 0,-14 L 4,-4 L 14,0 L 4,4 L 0,14 L -4,4 L -14,0 L -4,-4 Z" fill="#cbff48"></path>
+  </g>
+
+  <rect width="800" height="600" filter="url(#job-grain)" opacity="0.05"></rect>
+</svg>
