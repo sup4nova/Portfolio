@@ -30,18 +30,24 @@ function run() {
 </script>
 
 <template>
-  <div class="bg-black/60 border border-white/10 rounded-xl p-4 text-[#EDEDED] max-w-xl">
-    <div class="h-52 overflow-auto text-sm font-mono space-y-1 mb-3">
-      <div v-for="(line, i) in output" :key="i">{{ line }}</div>
+  <div class="win max-w-xl">
+    <div class="win__bar">
+      <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="win__title">sup4nova shell</span>
     </div>
-    <div class="flex gap-2 items-center font-mono">
-      <span class="text-[#66FF9A]">sup4nova $</span>
-      <input
-        v-model="cmd"
-        @keyup.enter="run"
-        class="flex-1 bg-transparent outline-none border-b border-white/10 pb-1"
-        placeholder="help"
-      />
+    <div class="win__body">
+      <div class="h-52 overflow-auto text-sm font-mono space-y-1 mb-3">
+        <div v-for="(line, i) in output" :key="i">{{ line }}</div>
+      </div>
+      <div class="flex gap-2 items-center font-mono">
+        <span class="font-bold">sup4nova $</span>
+        <input
+          v-model="cmd"
+          @keyup.enter="run"
+          class="flex-1 bg-transparent outline-none border-b-2 border-[var(--ink)] pb-1"
+          placeholder="help"
+        />
+      </div>
     </div>
   </div>
 </template>

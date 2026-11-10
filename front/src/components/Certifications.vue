@@ -9,70 +9,91 @@ const certifications = [
   { title: 'Scrum Master Certified', issuer: 'ScrumStudy', year: '2022' },
   { title: 'Cisco CCNA', issuer: 'Cisco', year: '2021' },
 ]
+
+// pas d'autoplay si l'utilisateur préfère réduire les animations
+const autoplay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 3000
 </script>
 
 <template>
-  <Carousel
-    :items-to-show="3"
-    :wrap-around="true"
-    :autoplay="3000"
-    :transition="500"
-    :breakpoints="{
-      1280: { itemsToShow: 3, snapAlign: 'center' },
-      1024: { itemsToShow: 2.2, snapAlign: 'center' },
-      768:  { itemsToShow: 1.5, snapAlign: 'center' },
-      480:  { itemsToShow: 1.1, snapAlign: 'center' },
-      0:    { itemsToShow: 1, snapAlign: 'center' }
-    }"
-  >
-    <Slide v-for="(cert, idx) in certifications" :key="idx">
-      <div class="cert-card">
-        <h3>{{ cert.title }}</h3>
-        <p v-if="cert.issuer">{{ cert.issuer }}</p>
-        <p v-if="cert.year" class="year">Obtenue : {{ cert.year }}</p>
-      </div>
-    </Slide>
+  <div id="certifications" class="certs">
+    <span class="label">Achievements</span>
+    <h3 class="h-display certs__title">Certifications</h3>
 
-    <template #addons>
-      <Navigation />
-      <Pagination />
-    </template>
-  </Carousel>
+    <Carousel
+      :items-to-show="3"
+      :wrap-around="true"
+      :autoplay="autoplay"
+      :transition="500"
+      :breakpoints="{
+        1280: { itemsToShow: 3, snapAlign: 'center' },
+        1024: { itemsToShow: 2.2, snapAlign: 'center' },
+        768:  { itemsToShow: 1.5, snapAlign: 'center' },
+        480:  { itemsToShow: 1.1, snapAlign: 'center' },
+        0:    { itemsToShow: 1, snapAlign: 'center' }
+      }"
+    >
+      <Slide v-for="cert in certifications" :key="cert.title">
+        <div class="win cert-card">
+          <div class="win__bar">
+            <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="win__title">{{ cert.issuer }}</span>
+          </div>
+          <div class="win__body cert-card__body">
+            <h4 class="cert-card__title">{{ cert.title }}</h4>
+            <span class="tag tag--pixel" style="--tag: var(--c-2)">Obtenue : {{ cert.year }}</span>
+          </div>
+        </div>
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+        <Pagination />
+      </template>
+    </Carousel>
+  </div>
 </template>
 
 <style scoped>
-/* ta carte */
+.certs {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+.certs__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0.8rem 0 1.2rem;
+}
 .cert-card {
-  background: #fff;
-  color: #0f172a;
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
-  min-height: 110px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  width: 100%;
+  text-align: left;
+}
+.cert-card__body {
   display: flex;
   flex-direction: column;
-  gap: .35rem;
+  align-items: flex-start;
+  gap: 0.8rem;
+  min-height: 7.5rem;
+  padding: 1.1rem 1.2rem;
 }
-.cert-card h3 {
-  font-weight: 600;
-  font-size: 0.9rem;
-  line-height: 1.2;
-}
-.cert-card p {
-  font-size: 0.75rem;
-}
-.cert-card .year {
-  font-size: 0.7rem;
-  opacity: .7;
+.cert-card__title {
+  margin: 0;
+  font: 600 1rem / 1.3 var(--f-body);
 }
 
-/* réduire l’écart entre slides */
-.carousel__slide {
-  padding: 0;
+/* l'ombre dure de .win déborde : on garde de la marge dans la fenêtre du carrousel */
+:deep(.carousel__slide) {
+  padding: 0.4rem 0.9rem 0.9rem;
 }
-/* centrer le carrousel sur fond noir */
-.carousel {
-  max-width: 1200px;
-  margin: 0 auto;
+
+/* carrousel aux couleurs de la section */
+.certs :deep(.carousel) {
+  --vc-clr-primary: var(--ink);
+  --vc-clr-secondary: var(--ink);
+  --vc-clr-white: var(--paper);
+  --vc-pgn-background-color: color-mix(in srgb, var(--ink) 25%, transparent);
+  --vc-pgn-active-color: var(--ink);
+}
+:deep(.carousel__prev:focus-visible),
+:deep(.carousel__next:focus-visible) {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
-  <main class="min-h-screen bg-[#050505] text-[#EDEDED] p-6">
-    <h1 class="text-3xl font-bold">Contact</h1>
-    <p class="opacity-70">formulaire plus tard</p>
-  </main>
+  <section class="section t-melon">
+    <div class="section__in">
+      <h1 class="h-display section__title">Contact</h1>
+      <p>formulaire plus tard</p>
+    </div>
+  </section>
 </template>

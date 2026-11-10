@@ -11,18 +11,23 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    About: typeof import('./src/components/About.vue')['default']
     BlogPosts: typeof import('./src/components/BlogPosts.vue')['default']
-    Button: typeof import('primevue/button')['default']
-    Carousel: typeof import('./src/components/Carousel.vue')['default']
     Certifications: typeof import('./src/components/Certifications.vue')['default']
     CommandBlock: typeof import('./src/components/CommandBlock.vue')['default']
+    Contact: typeof import('./src/components/Contact.vue')['default']
     ContactCard: typeof import('./src/components/ContactCard.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
+    Journey: typeof import('./src/components/Journey.vue')['default']
     LongCard: typeof import('./src/components/LongCard.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
+    Projects: typeof import('./src/components/Projects.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Tag: typeof import('primevue/tag')['default']
-    UCarousel: typeof import('./src/components/UCarousel.vue')['default']
+    SectionDivider: typeof import('./src/components/SectionDivider.vue')['default']
+    SiteFooter: typeof import('./src/components/SiteFooter.vue')['default']
+    Stack: typeof import('./src/components/Stack.vue')['default']
+    SvgDefs: typeof import('./src/components/SvgDefs.vue')['default']
+    WorkingWithAI: typeof import('./src/components/WorkingWithAI.vue')['default']
   }
 }

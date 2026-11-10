@@ -1,0 +1,143 @@
+/* Base + mise en page des sections (reprend les règles .s / .in / .deco de la maquette DA Pastel) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* largeur max du contenu : 1080px sur laptop, grandit avec l'écran */
+  --container: clamp(1080px, 72vw, 1680px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* grands écrans : tout ce qui est en rem (textes, espacements, titres) grandit avec */
+@media (min-width: 1700px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+@media (min-width: 2200px) {
+  html {
+    font-size: 125%;
+  }
+}
+@media (min-width: 3000px) {
+  html {
+    font-size: 150%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font: 400 var(--fs-body) / 1.65 var(--f-body);
+  color: var(--ink);
+  background: var(--paper);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* mots longs (emails, URLs) : jamais de débordement horizontal */
+h1,
+h2,
+h3,
+p,
+li,
+blockquote {
+  overflow-wrap: anywhere;
+}
+
+/* section : fond thématique, décor absolu rogné aux bords */
+.section {
+  position: relative;
+  padding: var(--space-section) 0;
+  overflow: hidden;
+}
+
+.section[id] {
+  scroll-margin-top: 4rem;
+}
+
+.section__in {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(1.1rem, 4vw, 2.5rem);
+}
+
+.section__title {
+  font-size: var(--fs-h2);
+  margin: 0.9rem 0 1.6rem;
+}
+
+/* décor : max 2-3 éléments par écran, jamais interactif */
+.deco {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* grille responsive : 1 colonne sous 880px */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+@media (max-width: 880px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* grille 3 colonnes (Parcours, Projets) : 3 en desktop, 2 en tablette, 1 en mobile */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+@media (max-width: 1100px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* tactile : zones de clic confortables, pas de survol collant */
+@media (hover: none) {
+  .win:hover {
+    transform: none;
+    box-shadow: var(--sh-hard);
+  }
+}

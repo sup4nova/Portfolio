@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import plant1 from '../assets/plant1.jpg'
-import plant2 from '../assets/plant2.jpg'
-import plant3 from '../assets/plant3.jpg'
-
 const posts = ref([
   {
     title: 'Synorva',
     description: 'Design a multimodal tool that analyzes music & images, maps their emotions (valence–arousal), associates media with each other and generates coherent audio tracks from images/videos.',
-    image: plant1,
     date: '2025-10-30',
     try: 'http://localhost:5174/',
     page: 'https://github.com/sup4nova/Synorva'
@@ -17,63 +12,87 @@ const posts = ref([
   {
     title: 'Nuxt 3.14',
     description: 'Nuxt 3.14 is out!',
-    image: plant2,
     date: '2024-11-04'
   },
   {
     title: 'Nuxt 3.13',
     description: 'Nuxt 3.13 is out!',
-    image: plant3,
     date: '2024-08-22'
   }
 ])
 </script>
 
 <template>
-  <section class="max-w-5xl mx-auto px-6 py-20 space-y-8 text-[#EDEDED] bg-[#050505]">
-    <h2 class="text-4xl font-800 tracking-tight text-[#D16FFF] mb-8">Latest Posts</h2>
+  <section id="projects" class="section t-melon bg-stripes">
+    <svg class="deco sticker" style="--s: 48px; right: 5%; top: 6%" aria-hidden="true"><use href="#star" /></svg>
 
-    <div class="grid gap-8">
-      <article
-        v-for="(post, index) in posts"
-        :key="index"
-        class="flex flex-col md:flex-row items-center gap-6 p-6 rounded-2xl
-               border border-white/10 bg-[#0B0B0B]/80 backdrop-blur-md
-               hover:border-[#D16FFF]/40 hover:shadow-[0_0_20px_rgba(209,111,255,0.3)]
-               transition duration-300"
-      >
-        <img
-          :src="post.image"
-          :alt="post.title"
-          class="w-full md:w-60 h-40 object-cover rounded-xl border border-white/10"
-        />
+    <div class="section__in">
+      <span class="label">Projects</span>
+      <h2 class="h-display section__title">Latest Posts</h2>
 
-        <div class="flex-1 space-y-3">
-          <p class="text-xs text-[#66FF9A]/70">{{ new Date(post.date).toDateString() }}</p>
-          <h3 class="text-2xl font-bold text-[#FF9D40]">{{ post.title }}</h3>
-          <p class="opacity-80">{{ post.description }}</p>
-          <a
-          :href="post.try"
-          target="_blank"
-          rel="noreferrer"
-          class="inline-flex items-center gap-1 mt-2 px-4 py-2 rounded-lg
-                bg-[#D16FFF]/80 hover:bg-[#D16FFF] text-white font-semibold
-                tracking-wide transition"
-          >
-          Try it →
-        </a>
-        <a
-          :href="post.page"
-          target="_blank"
-          rel="noreferrer"
-          class="inline-flex items-center gap-1 mt-2 px-4 py-2 rounded-lg
-                bg-[#D16FFF]/80 hover:bg-[#D16FFF] text-white font-semibold
-                tracking-wide transition"
-          >
-          Read more →
-        </a>
-        </div>
-      </article>
+      <div class="posts">
+        <article v-for="post in posts" :key="post.title" class="win">
+          <div class="win__bar">
+            <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="win__title">{{ new Date(post.date).toDateString() }}</span>
+          </div>
+
+          <div class="win__body post">
+            <div class="frame frame--checker post__img">
+              <div class="ph">{{ post.title }}</div>
+            </div>
+
+            <div class="post__content">
+              <h3 class="post__title">{{ post.title }}</h3>
+              <p class="post__desc">{{ post.description }}</p>
+              <div v-if="post.try || post.page" class="row">
+                <a v-if="post.try" :href="post.try" target="_blank" rel="noreferrer" class="btn btn--accent">
+                  Try it →
+                </a>
+                <a v-if="post.page" :href="post.page" target="_blank" rel="noreferrer" class="btn">
+                  Read more →
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.posts {
+  display: grid;
+  gap: 2rem;
+}
+.post {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.post__img {
+  flex: none;
+  width: 11rem;
+}
+.post__content {
+  flex: 1;
+  min-width: 0;
+}
+.post__title {
+  margin: 0 0 0.4rem;
+  font: 600 var(--fs-h3) / 1.25 var(--f-body);
+}
+.post__desc {
+  margin: 0 0 1rem;
+}
+@media (max-width: 880px) {
+  .post {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .post__img {
+    width: 9rem;
+  }
+}
+</style>

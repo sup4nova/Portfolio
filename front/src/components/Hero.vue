@@ -3,55 +3,75 @@ import stars from '../assets/sup4nova-stars.jpeg'
 </script>
 
 <template>
-  <section
-    class="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto px-6 py-20
-           text-[#EDEDED] bg-[#050505]"
-  >
-    <div class="space-y-5">
-      <p class="uppercase text-sm tracking-wide text-[#66FF9A]">New release</p>
+  <section id="home" class="section hero t-melon bg-dots">
+    <svg class="deco sparkle" style="--s: 40px; right: 7%; top: 16%" aria-hidden="true"><use href="#spark" /></svg>
+    <svg class="deco sticker" style="--s: 56px; left: 4%; bottom: 8%; --c: var(--c-3)" aria-hidden="true"><use href="#star" /></svg>
 
-      <h1 class="text-5xl md:text-6xl font-800 leading-tight">
-        Cyber. Sound. AI.
-      </h1>
+    <div class="section__in split">
+      <div class="win">
+        <div class="win__bar">
+          <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="win__title">C:\sup4nova.exe</span>
+        </div>
 
-      <p class="opacity-80 max-w-prose text-lg">
-        MIAOU MIAOU MIAOU
-        <span class="text-[#D16FFF]">cyber aesthetics</span>,
-        <span class="text-[#FF9D40]">sound design</span> and
-        <span class="text-[#66FF9A]">AI-driven art</span>.
-      </p>
-    </div>
-    <div class="flex flex-wrap gap-4 pt-4">
-      <a
-        href="https://github.com/sup4nova"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
-              bg-[#D16FFF]/90 hover:bg-[#D16FFF]
-              transition shadow-[0_0_16px_rgba(209,111,255,.35)]
-              font-semibold tracking-wide"
-      >
-        View Projects
-      </a>
+        <div class="win__body hero__body">
+          <span class="label">World 1 · 起動</span>
 
-      <RouterLink
-        to="/about"
-        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
-              border border-white/15 hover:border-[#FF9D40]/60 transition
-              font-semibold tracking-wide"
-      >
-        About Me
-      </RouterLink>
-    </div>
+          <h1 class="h-display hero__title" aria-label="Sup4nova">Sup<span class="chrome">4</span>nova</h1>
 
-    <div class="flex justify-center md:justify-end">
-      <img
-        :src="stars"
-        alt="Sup4nova hero visual"
-        class="rounded-xl shadow-2xl ring-2 ring-white/10
-               border border-white/10 max-w-[480px] w-full
-               hover:drop-shadow-[0_0_15px_#D16FFF80] transition"
-      />
+          <p class="hero__text">
+            Explorations at the edge of cyber, development &amp; AI-driven art.
+          </p>
+
+          <div class="row">
+            <a href="#projects" class="btn">See my work ↓</a>
+            <a href="mailto:contact@sup4nova.com" class="btn btn--ghost">contact@sup4nova.com</a>
+          </div>
+
+          <div class="row hero__status">
+            <span class="tag tag--live">Open to work · Q3 2026</span>
+            <span class="tag" style="--tag: var(--c-2)">EU + remote</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- .glow en wrapper : le filter de .frame--flower écraserait le halo -->
+      <div class="glow hero__frame">
+        <div class="frame frame--flower">
+          <img :src="stars" alt="Sup4nova hero visual" />
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+/* la navbar flottante n'a pas d'emprise : on réserve sa hauteur */
+.hero {
+  padding-top: clamp(6rem, 12vw, 8rem);
+}
+.hero__body {
+  padding: 2rem 2.2rem 2.2rem;
+}
+.hero__title {
+  font-size: var(--fs-hero);
+  margin: 1rem 0 0.9rem;
+}
+.hero__text {
+  max-width: 34ch;
+  margin: 0 0 1.6rem;
+  font-size: 1.15rem;
+}
+.hero__status {
+  margin-top: 1.4rem;
+}
+@media (max-width: 880px) {
+  .hero__body {
+    padding: 1.6rem 1.4rem 1.8rem;
+  }
+  .hero__frame {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+</style>

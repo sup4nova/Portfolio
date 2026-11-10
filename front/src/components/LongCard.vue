@@ -1,21 +1,54 @@
-<script setup lang="ts">
-import jellyfish from '@/assets/jellyfish.jpg'
-</script>
-
 <template>
-  <section
-    class="max-w-3xl mx-auto my-10 p-6 rounded-2xl border border-white/10 
-           bg-[#0A0A0A]/80 backdrop-blur-md shadow-[0_0_20px_rgba(209,111,255,.2)]
-           flex items-center gap-6 hover:shadow-[0_0_25px_rgba(209,111,255,.4)]
-           transition"
-  >
-    <img :src="jellyfish" alt="Tailwind CSS" class="w-48 h-auto rounded-xl border border-white/10" />
+  <section class="section t-lemon bg-gingham">
+    <svg class="deco sparkle" style="--s: 34px; left: 6%; top: 12%; --c: #fff" aria-hidden="true"><use href="#spark" /></svg>
 
-    <div class="space-y-2">
-      <h3 class="text-2xl font-bold text-[#D16FFF]">Tailwind CSS</h3>
-      <p class="text-[#EDEDED]/80 text-sm leading-relaxed">
-        Nuxt UI integrates with the latest Tailwind CSS v4, bringing significant improvements.
-      </p>
+    <div class="section__in">
+      <div class="win longcard">
+        <div class="win__bar">
+          <span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="win__title">Tailwind CSS</span>
+        </div>
+
+        <div class="win__body longcard__body">
+          <div class="frame frame--flower longcard__frame">
+            <div class="ph">your illustration</div>
+          </div>
+
+          <p class="longcard__text">
+            Nuxt UI integrates with the latest Tailwind CSS v4, bringing significant improvements.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.longcard {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.longcard__body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.longcard__frame {
+  flex: none;
+  width: 12rem;
+}
+.longcard__text {
+  margin: 0;
+  font-size: 0.95rem;
+}
+@media (max-width: 880px) {
+  .longcard__body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .longcard__frame {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+</style>

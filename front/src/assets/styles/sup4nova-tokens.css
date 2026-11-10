@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@400;500;600&family=DotGothic16&display=swap');
+:root{
+--ink:#1d4a52;--ink-2:#4a727b;--paper:#fffdf6;
+--f-display:'Bagel Fat One',system-ui,sans-serif;--f-body:'Space Grotesk',system-ui,sans-serif;--f-pixel:'DotGothic16',ui-monospace,monospace;
+--ls-display:.03em;--ls-pixel:.16em;
+--fs-hero:clamp(3rem,8vw,6rem);--fs-h2:clamp(2rem,4.6vw,3.3rem);--fs-h3:1.2rem;--fs-body:1rem;--fs-pixel:.72rem;
+--r-sm:10px;--r-md:18px;--r-lg:26px;--r-pill:999px;
+--bw:2px;--line:var(--bw) solid var(--ink);
+--sh-hard:5px 5px 0 var(--shadow);--sh-soft:0 18px 40px -18px var(--shadow);
+--ease:cubic-bezier(.22,.8,.3,1);--dur:.35s;
+--space-section:clamp(4.5rem,10vw,8rem);
+}
+.t-melon{--bg:#f3fbf5;--bg-2:#d7f3e7;--surface:var(--paper);--c-1:#3cc6b8;--c-2:#bdeedc;--c-3:#ffb3ad;--accent:#ff5d8a;--bar:#c9f1e2;--shadow:rgba(60,198,184,.5);--dot:#bfe6d6}
+.t-lemon{--bg:#dff0ff;--bg-2:#fff6c8;--surface:var(--paper);--c-1:#8ccbff;--c-2:#fff09a;--c-3:#fff8dc;--accent:#ffc300;--bar:#fff09a;--shadow:rgba(90,170,240,.5);--dot:#bcdcf7}
+.t-melon,.t-lemon{background-color:var(--bg);color:var(--ink)}

@@ -1,6 +1,8 @@
 <template>
-  <main class="min-h-screen bg-[#050505] text-[#EDEDED] p-6">
-    <h1 class="text-3xl font-bold">About</h1>
-    <p class="opacity-70">présente-toi ici</p>
-  </main>
+  <section class="section t-melon">
+    <div class="section__in">
+      <h1 class="h-display section__title">About</h1>
+      <p>présente-toi ici</p>
+    </div>
+  </section>
 </template>
